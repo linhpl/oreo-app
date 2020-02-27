@@ -12,7 +12,7 @@ import Rating from 'src/containers/Rating';
 
 import {margin, padding} from 'src/components/config/spacing';
 
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 const ItemProduct = ({item, navigation}) => {
   const {t} = useTranslation();
@@ -44,7 +44,7 @@ const ItemProduct = ({item, navigation}) => {
         <TouchableOpacity
           style={[styles.container, {borderColor: theme.colors.border}]}
           onPress={() =>
-            navigation.push(mainStack.product, {
+            navigation.push(shopStack.product, {
               id,
             })
           }>

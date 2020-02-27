@@ -23,9 +23,7 @@ export const homeTabs = {
 export const mainStack = {
   home_drawer: 'HomeDrawer',
   search: 'SearchScreen',
-  products: 'ProductsScreen',
 
-  product: 'ProductScreen',
   product_review: 'ProductReviewScreen',
   product_review_form: 'ProductReviewFromScreen',
   product_description: 'ProductDescriptionFromScreen',
@@ -80,6 +78,12 @@ export const profileStack = {
   vendors: 'VendorsScreen',
   chat_vendor: 'ChatVendorScreen',
   edit_account: 'EditAccountScreen',
+};
+
+export const shopStack = {
+  categories: 'categoriesScreen',
+  products: 'ProductsScreen',
+  product: 'ProductScreen',
 };
 
 export const rootSwitch = {

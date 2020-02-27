@@ -12,7 +12,7 @@ import ViewRefine from './containers/ViewRefine';
 
 import {filterBySelector} from 'src/modules/product/selectors';
 import {filterByProduct} from 'src/modules/product/actions';
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 class FilterAttribute extends React.Component {
   /**
@@ -82,7 +82,7 @@ class FilterAttribute extends React.Component {
 
   showResult = () => {
     const {filterBy, navigation} = this.props;
-    navigation.navigate(mainStack.products, {filterBy});
+    navigation.navigate(shopStack.products, {filterBy});
   };
 
   clearAll = () => {

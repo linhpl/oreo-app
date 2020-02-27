@@ -4,10 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import HomeDrawer from './home-drawer';
 
-import Products from 'src/screens/shop/products';
 import Search from 'src/screens/shop/search';
-
-import Product from 'src/screens/shop/product';
 import ProductReview from 'src/screens/shop/product-review';
 import ProductReviewForm from 'src/screens/shop/product-review-form';
 import ProductDescription from 'src/screens/shop/product-description';
@@ -30,10 +27,8 @@ import LinkingWebview from 'src/screens/linking-webview';
 export default createStackNavigator(
   {
     [mainStack.home_drawer]: HomeDrawer,
-    [mainStack.products]: Products,
     [mainStack.search]: Search,
 
-    [mainStack.product]: Product,
     [mainStack.product_review]: ProductReview,
     [mainStack.product_review_form]: ProductReviewForm,
     [mainStack.product_attribute]: ProductAttribute,

@@ -16,7 +16,7 @@ import { loadingWishListSelector, dataWishListSelector } from 'src/modules/produ
 import { wishListSelector } from 'src/modules/common/selectors';
 
 import { margin } from 'src/components/config/spacing';
-import { homeTabs } from 'src/config/navigator';
+import { shopStack } from 'src/config/navigator';
 
 class WishListScreen extends React.Component {
   componentDidMount() {
@@ -51,7 +51,7 @@ class WishListScreen extends React.Component {
           title={t('empty:text_title_wishlist')}
           subTitle={t('empty:text_subtitle_wishlist')}
           titleButton={t('common:text_go_shopping')}
-          clickButton={() => navigation.navigate(homeTabs.shop)}
+          clickButton={() => navigation.navigate(shopStack.categories)}
         />
       );
     }

@@ -18,12 +18,12 @@ import {padding} from 'src/components/config/spacing';
 
 import {categoryListType} from 'src/config/category';
 
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 class CategoryScreen extends Component {
 
   goProducts = item => {
-    this.props.navigation.navigate(mainStack.products, {
+    this.props.navigation.navigate(shopStack.products, {
       id: item.id,
       name: item.name,
     });

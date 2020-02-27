@@ -5,7 +5,7 @@ import { Image, Text } from 'src/components';
 
 import { withNavigation } from 'react-navigation';
 
-import { mainStack } from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 import { red } from 'src/components/config/colors';
 import { borderRadius, margin, padding } from 'src/components/config/spacing';
 
@@ -46,7 +46,7 @@ const CategoryItem = (props: Props) => {
   const widthTouch = border ? width +  2 * padding.small : width;
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate(mainStack.products, { id: item.id, name: item.name })}
+      onPress={() => navigation.navigate(shopStack.products, { id: item.id, name: item.name })}
       style={[{ width: widthTouch }, style && style]}
     >
       <View style={viewBorder}>

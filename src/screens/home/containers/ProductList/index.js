@@ -10,7 +10,7 @@ import {withTranslation} from 'react-i18next';
 import {connect} from 'react-redux';
 import {compose} from 'recompose';
 
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 import {productListTypes} from 'src/config/product';
 
 import Container from 'src/containers/Container';
@@ -182,7 +182,7 @@ class ProductList extends Component {
                 style={heading.style}
                 containerStyle={{ paddingTop: 0 }}
                 onPress={() =>
-                  navigation.navigate(mainStack.products, {
+                  navigation.navigate(shopStack.products, {
                     name: heading.text[language],
                     filterBy: Map({
                       include: include,

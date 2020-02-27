@@ -5,7 +5,7 @@ import {ActivityIndicator, View} from 'react-native';
 import {ThemedView} from 'src/components';
 import Button from 'src/containers/Button';
 import Container from 'src/containers/Container';
-import {homeTabs} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 import {connect} from 'react-redux';
 import {clearCart} from 'src/modules/cart/actions';
 import {margin} from 'src/components/config/spacing';
@@ -24,7 +24,7 @@ class WebviewThankYou extends Component {
     const { navigation, dispatch } = this.props;
     dispatch(clearCart());
     navigation.pop();
-    navigation.navigate(homeTabs.shop);
+    navigation.navigate(shopStack.categories);
   };
 
   handleResponse = data => {

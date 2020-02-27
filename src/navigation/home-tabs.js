@@ -3,9 +3,10 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import Home from 'src/screens/home';
-import Category from 'src/screens/shop/category';
+// import Category from 'src/screens/shop/category';
 import WishList from 'src/screens/wishlist';
 
+import ShopStack from './shop-stack';
 import ProfileStack from './profile-stack';
 import CartStack from './cart-stack';
 
@@ -19,7 +20,7 @@ const Tabs = createBottomTabNavigator(
       screen: Home,
     },
     [homeTabs.shop]: {
-      screen: Category,
+      screen: ShopStack,
     },
     [homeTabs.wish_list]: {
       screen: WishList,
@@ -27,7 +28,7 @@ const Tabs = createBottomTabNavigator(
     [homeTabs.cart]: {
       screen: CartStack,
       navigationOptions: ({ navigation }) => {
-        const {state: {index}} = navigation
+        const {state: {index}} = navigation;
         return {
           tabBarVisible: index === 0,
         }

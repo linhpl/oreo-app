@@ -21,7 +21,7 @@ import {handleError} from 'src/utils/error';
 
 import * as productTypes from 'src/config/product';
 import {prepareProductItem} from 'src/utils/product';
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 import {padding, borderRadius} from 'src/components/config/spacing';
 import {checkQuantity} from 'src/utils/product';
 import {showMessage} from 'react-native-flash-message';
@@ -78,7 +78,7 @@ class ProductGrouped extends React.Component {
     }
   };
   goProductDetail = product => {
-    this.props.navigation.push(mainStack.product, {
+    this.props.navigation.push(shopStack.product, {
       product: product.toJS(),
     });
   };

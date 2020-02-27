@@ -11,7 +11,7 @@ import {sizes} from 'src/components/config/fonts';
 import {borderRadius, margin} from 'src/components/config/spacing';
 import {getTemplateConfigSelector, languageSelector} from 'src/modules/common/selectors';
 
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 import NavigationServices from 'src/utils/navigation';
 
@@ -20,7 +20,7 @@ const Notification = ({notification, style, textStyle, language, onPress, templa
   const styleTextCategory = templateConfig.getIn(['app_config', 'text_category', 'text', 'style']);
   const text = templateConfig.getIn(['app_config', 'text_category', 'text', language], '');
   const goToSales = () => {
-    NavigationServices.navigate(mainStack.products, {
+    NavigationServices.navigate(shopStack.products, {
       name: t('common:text_sales'),
       filterBy: Map({
         on_sale: true,

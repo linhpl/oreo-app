@@ -11,7 +11,7 @@ import SearchProductItem from './containers/SearchProductItem';
 
 import { currencySelector, defaultCurrencySelector } from 'src/modules/common/selectors';
 import { filterBySelector } from 'src/modules/product/selectors';
-import { mainStack } from 'src/config/navigator';
+import { shopStack } from 'src/config/navigator';
 import { filterByProduct, addKeyword } from 'src/modules/product/actions';
 import { prepareProductItem } from 'src/utils/product';
 
@@ -65,18 +65,18 @@ class SearchScreen extends React.Component {
   searchSubmit = () => {
     const { filterBy, navigation, dispatch } = this.props;
     dispatch(addKeyword(filterBy.get('search')));
-    navigation.navigate(mainStack.products, { name: filterBy.get('search'), filterBy });
+    navigation.navigate(shopStack.products, { name: filterBy.get('search'), filterBy });
   };
 
   handleRecentKeyword = search => {
     const { filterBy, navigation } = this.props;
     const newFilterBy = filterBy.set('search', search);
-    navigation.navigate(mainStack.products, { name: search, filterBy: newFilterBy });
+    navigation.navigate(shopStack.products, { name: search, filterBy: newFilterBy });
   };
 
   handleProductPage = product => {
     const { navigation, currency, defaultCurrency } = this.props;
-    navigation.navigate(mainStack.product, {
+    navigation.navigate(shopStack.product, {
       // no need get days in prepareProductItem
       product: prepareProductItem(fromJS(product), currency, defaultCurrency).toJS(),
     });

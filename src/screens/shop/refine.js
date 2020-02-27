@@ -8,7 +8,7 @@ import Container from 'src/containers/Container';
 import RadioIcon from './containers/RadioIcon';
 import ViewRefine from './containers/ViewRefine';
 
-import {mainStack} from 'src/config/navigator';
+import {mainStack, shopStack} from 'src/config/navigator';
 
 import {sortBySelector, attributeSelector} from 'src/modules/product/selectors';
 import {sortByProduct, fetchProductAttributes, clearFilter, fetchProducts} from 'src/modules/product/actions';
@@ -116,7 +116,7 @@ class RefineScreen extends React.Component {
 
   showResult = () => {
     const {navigation, sortBy} = this.props;
-    navigation.navigate(mainStack.products, {sortBy});
+    navigation.navigate(shopStack.products, {sortBy});
   };
 
   clearAll = () => {

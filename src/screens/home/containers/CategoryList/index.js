@@ -14,7 +14,7 @@ import Heading from 'src/containers/Heading';
 import Gird from './Gird';
 import Row from './Row';
 
-import { homeTabs } from 'src/config/navigator';
+import { shopStack } from 'src/config/navigator';
 import { languageSelector } from 'src/modules/common/selectors';
 import { margin, padding } from 'src/components/config/spacing';
 import {typeShowCategory } from 'src/config/category';
@@ -59,7 +59,7 @@ class CategoryList extends Component {
               style={heading.style && heading.style}
               containerStyle={{ paddingTop: 0 }}
               subTitle={t('common:text_show_all')}
-              onPress={() => navigation.navigate(homeTabs.shop)}
+              onPress={() => navigation.navigate(shopStack.categories)}
             />
           </Container>
         )}

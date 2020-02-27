@@ -23,7 +23,7 @@ import {addToCart} from 'src/modules/cart/actions';
 
 import {white, black} from 'src/components/config/colors';
 import {borderRadius, margin} from 'src/components/config/spacing';
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 import {SIMPLE} from 'src/config/product';
 
@@ -45,7 +45,7 @@ export function ItemDefault(props) {
   return (
     <TouchableOpacity
       style={productItemStyle}
-      onPress={() => navigation[navigationType](mainStack.product, {product: item})}
+      onPress={() => navigation[navigationType](shopStack.product, {product: item})}
     >
       <View>
         <Image

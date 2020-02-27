@@ -5,7 +5,7 @@ import {TouchableOpacity, StyleSheet} from 'react-native';
 import {Text, SafeAreaView} from 'src/components';
 import IconTabbar from './IconTabbar';
 
-import {homeTabs} from 'src/config/navigator';
+import {homeTabs, shopStack, profileStack} from 'src/config/navigator';
 
 import {configsSelector} from 'src/modules/common/selectors';
 
@@ -29,7 +29,7 @@ const Tabbar = (props) => {
     {
       iconName: 'search',
       name: t('common:text_shop'),
-      router: homeTabs.shop,
+      router: shopStack.categories,
       isShow: true,
     },
     {
@@ -49,7 +49,7 @@ const Tabbar = (props) => {
     {
       iconName: 'user',
       name: t('common:text_me'),
-      router: homeTabs.me,
+      router: profileStack.me,
       iconProps: {
         size: 23,
       },

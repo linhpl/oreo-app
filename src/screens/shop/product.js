@@ -45,7 +45,7 @@ import {changeColor, changeSize} from 'src/utils/text-html';
 import {getSingleData, defaultPropsData} from 'src/hoc/single-data';
 import {withLoading} from 'src/hoc/loading';
 
-import {mainStack, homeTabs} from 'src/config/navigator';
+import {mainStack, homeTabs, shopStack} from 'src/config/navigator';
 import {margin} from 'src/components/config/spacing';
 import * as productType from 'src/config/product';
 
@@ -265,7 +265,7 @@ class Product extends Component {
           <Empty
             title={t('empty:text_title_product_detail')}
             subTitle={t('empty:text_subtitle_product_detail')}
-            clickButton={() => navigation.navigate(homeTabs.shop)}
+            clickButton={() => navigation.navigate(shopStack.categories)}
           />
         </ThemedView>
       );

@@ -9,7 +9,7 @@ import OrderItem from './order/OrderItem';
 import fetch from 'src/utils/request';
 import { authSelector } from 'src/modules/auth/selectors';
 
-import { homeTabs } from 'src/config/navigator';
+import { shopStack } from 'src/config/navigator';
 
 import { margin } from 'src/components/config/spacing';
 
@@ -127,7 +127,7 @@ class ListOrder extends React.Component {
       icon="box"
       title={t('empty:text_title_order')}
       subTitle={t('empty:text_subtitle_order')}
-      clickButton={() => navigation.navigate(homeTabs.shop)}
+      clickButton={() => navigation.navigate(shopStack.categories)}
     />;
   };
   render() {

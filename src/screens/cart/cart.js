@@ -15,7 +15,7 @@ import CartItem from './containers/CartItem';
 import CartTotal from './containers/CartTotal';
 import Coupon from './containers/Coupon';
 
-import { mainStack, homeTabs, cartStack } from 'src/config/navigator';
+import { mainStack, cartStack, shopStack } from 'src/config/navigator';
 import { margin } from 'src/components/config/spacing';
 import { selectCartList, cartSizeSelector } from 'src/modules/cart/selectors';
 import { removeCart, changeQuantity } from 'src/modules/cart/actions';
@@ -26,7 +26,7 @@ import { checkQuantity } from 'src/utils/product';
 class CartScreen extends React.Component {
   goToProduct = product => {
     const {navigation} = this.props;
-    navigation.navigate(mainStack.product, {product});
+    navigation.navigate(shopStack.product, {product});
   };
 
   changeQuantity = (item, quantity) => {
@@ -76,7 +76,7 @@ class CartScreen extends React.Component {
           icon="shopping-bag"
           title={t('empty:text_title_cart')}
           subTitle={t('empty:text_subtitle_cart')}
-          clickButton={() => navigation.navigate(homeTabs.shop)}
+          clickButton={() => navigation.navigate(shopStack.categories)}
         />
       );
     }

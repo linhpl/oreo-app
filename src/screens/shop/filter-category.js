@@ -11,7 +11,7 @@ import { filterByProduct } from 'src/modules/product/actions';
 
 import { languageSelector } from 'src/modules/common/selectors';
 
-import { mainStack } from 'src/config/navigator';
+import { shopStack } from 'src/config/navigator';
 import {categorySelector} from '../../modules/category/selectors';
 
 class FilterCategory extends React.Component {
@@ -54,7 +54,7 @@ class FilterCategory extends React.Component {
 
   showResult = () => {
     const { filterBy, navigation } = this.props;
-    navigation.navigate(mainStack.products, { filterBy });
+    navigation.navigate(shopStack.products, { filterBy });
   };
 
   clearAll = () => {

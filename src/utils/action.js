@@ -1,7 +1,7 @@
 import React from 'react';
 import {Linking} from 'react-native';
 import NavigationServices from './navigation';
-import {blogStack, mainStack} from 'src/config/navigator';
+import {blogStack, shopStack} from 'src/config/navigator';
 
 function action(data) {
   if (data && data.type && data.id) {
@@ -14,11 +14,11 @@ function action(data) {
       default:
         const router =
           type === 'category'
-            ? mainStack.products
+            ? shopStack.products
             : type === 'blog'
             ? blogStack.blog_detail
             : type === 'product'
-            ? mainStack.product
+            ? shopStack.product
             : null;
         if (router) {
           return NavigationServices.navigate(router, {id, type});

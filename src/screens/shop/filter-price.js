@@ -11,7 +11,7 @@ import { currencySelector } from 'src/modules/common/selectors';
 import { filterBySelector, priceRangesSelector } from 'src/modules/product/selectors';
 import { filterByProduct } from 'src/modules/product/actions';
 
-import { mainStack } from 'src/config/navigator';
+import {shopStack } from 'src/config/navigator';
 
 const { width } = Dimensions.get('window');
 
@@ -52,7 +52,7 @@ class FilterPrice extends PureComponent {
     }
 
     filterByProduct(newFilter);
-    navigation.navigate(mainStack.products, { filterBy: newFilter });
+    navigation.navigate(shopStack.products, { filterBy: newFilter });
   };
 
   clearAll = () => {

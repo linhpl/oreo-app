@@ -9,7 +9,7 @@ import { withTheme, Text, Avatar } from 'src/components';
 import Container from 'src/containers/Container';
 import Button from 'src/containers/Button';
 
-import { homeTabs } from 'src/config/navigator';
+import { shopStack } from 'src/config/navigator';
 
 import { white } from 'src/components/config/colors';
 import { margin } from 'src/components/config/spacing';
@@ -19,7 +19,7 @@ class Done extends React.Component {
   handleContinue = () => {
     const { navigation } = this.props;
     navigation.pop();
-    navigation.navigate(homeTabs.shop);
+    navigation.navigate(shopStack.categories);
   };
 
   render() {

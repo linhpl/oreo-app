@@ -9,7 +9,7 @@ import Price from 'src/containers/Price';
 import WishListIcon from 'src/containers/WishListIcon';
 
 import {margin, padding} from 'src/components/config/spacing';
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 const Item2 = ({item, width, height, navigationType, style, theme, navigation}) => {
   if (!item) {
@@ -32,7 +32,7 @@ const Item2 = ({item, width, height, navigationType, style, theme, navigation}) 
         {borderColor: theme.colors.border},
         style && style
       ]}
-      onPress={() => navigation[navigationType](mainStack.product, { product: item })}
+      onPress={() => navigation[navigationType](shopStack.product, { product: item })}
     >
       <Image
         source={

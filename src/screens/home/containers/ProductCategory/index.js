@@ -22,7 +22,7 @@ import {getProducts} from 'src/modules/product/service';
 import {prepareProductItem} from 'src/utils/product';
 import {handleError} from 'src/utils/error';
 
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 const initHeader = {
   style: {},
@@ -129,7 +129,7 @@ class ProductCategory extends React.Component {
                 style={heading.style}
                 containerStyle={{paddingTop: 0}}
                 onPress={() =>
-                  navigation.navigate(mainStack.products, {
+                  navigation.navigate(shopStack.products, {
                     name: heading.text[language],
                     filterBy: Map({
                       category  : category_id,

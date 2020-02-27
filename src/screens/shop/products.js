@@ -23,7 +23,7 @@ import {clearFilter, fetchProducts as clearData} from 'src/modules/product/actio
 import {getProducts} from 'src/modules/product/service';
 
 import {margin} from 'src/components/config/spacing';
-import {mainStack, homeTabs} from 'src/config/navigator';
+import {mainStack, shopStack} from 'src/config/navigator';
 import {categorySelector} from 'src/modules/category/selectors';
 
 class ProductsScreen extends React.Component {
@@ -132,7 +132,7 @@ class ProductsScreen extends React.Component {
   };
 
   handleCategoryPress = (id, name) => {
-    this.props.navigation.push(mainStack.products, {
+    this.props.navigation.push(shopStack.products, {
       id: id,
       name: name,
     });
@@ -209,7 +209,7 @@ class ProductsScreen extends React.Component {
             title={t('empty:text_title_product')}
             subTitle={t('empty:text_subtitle_product')}
             titleButton={t('common:text_go_shopping')}
-            clickButton={() => navigation.navigate(homeTabs.shop)}
+            clickButton={() => navigation.navigate(shopStack.categories)}
           />
         )}
       </ThemedView>

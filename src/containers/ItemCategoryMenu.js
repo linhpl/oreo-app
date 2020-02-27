@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { ListItem, Icon } from 'src/components';
 import { padding } from 'src/components/config/spacing';
 
-import { mainStack } from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 class ItemCategoryMenu extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class ItemCategoryMenu extends React.Component {
       id: category.id,
       name: category.name,
     };
-    this.props.goProducts(mainStack.products, params);
+    this.props.goProducts(shopStack.products, params);
   };
 
   render() {

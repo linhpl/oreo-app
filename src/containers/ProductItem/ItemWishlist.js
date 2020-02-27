@@ -11,7 +11,7 @@ import Button from '../Button';
 
 import {addToCart} from 'src/modules/cart/actions';
 import {configsSelector} from 'src/modules/common/selectors';
-import {mainStack} from 'src/config/navigator';
+import {shopStack} from 'src/config/navigator';
 
 import {SIMPLE} from 'src/config/product';
 import {padding, margin} from 'src/components/config/spacing';
@@ -34,7 +34,7 @@ const ItemWishlist = props => {
   } = item;
 
   const goProductDetail = () =>
-    navigation.navigate(mainStack.product, {
+    navigation.navigate(shopStack.product, {
       product: item,
     });
 
